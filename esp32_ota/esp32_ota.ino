@@ -9,10 +9,10 @@ const char * password = "Nikk@229";
 
 
 String FirmwareVer = {
-  "2.2"
+  "2.1"
 };
-#define URL_fw_Version "https://github.com/naronggorn12/ESP32_OTATEST/blob/main/bin_version.txt"
-#define URL_fw_Bin "https://github.com/naronggorn12/ESP32_OTATEST/blob/main/fw.bin"
+#define URL_fw_Version "https://raw.githubusercontent.com/naronggorn12/ESP32_OTATEST/main/bin_version.txt"
+#define URL_fw_Bin "https://raw.githubusercontent.com/naronggorn12/ESP32_OTATEST/main/fw.bin"
 
 
 void connect_wifi();
@@ -165,8 +165,8 @@ int FirmwareVersionCheck(void) {
   if (httpCode == HTTP_CODE_OK) // if version received
   {
     payload.trim();
-    if (payload.equals(FirmwareVer)) {
-      Serial.printf("\nDevice already on latest firmware version:%s\n", FirmwareVer);
+    if (payload.equals(FW_ver)) {
+      Serial.printf("\nDevice already on latest firmware version:%s\n", FW_ver);
       return 0;
     } 
     else 
