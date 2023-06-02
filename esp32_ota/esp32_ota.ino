@@ -9,7 +9,7 @@ const char * password = "Nikk@229";
 
 
 String FirmwareVer = {
-  "2.1"
+  "2.2"
 };
 #define URL_fw_Version "https://github.com/naronggorn12/ESP32_OTATEST/blob/main/bin_version.txt"
 #define URL_fw_Bin "https://github.com/naronggorn12/ESP32_OTATEST/blob/main/fw.bin"
